@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Labs | Digital Engagement Platforms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .brand-gradient { background: linear-gradient(135deg, #f35d28 0%, #ff8c66 100%); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-200 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="logo.svg" alt="Ignite Labs" class="h-10">
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-[#f35d28] transition">About Us</a>
+                <a href="#product" class="hover:text-[#f35d28] transition">Hadhiya Fihaara</a>
+                <a href="#partners" class="hover:text-[#f35d28] transition">For Partners</a>
+                <a href="#contact" class="bg-[#f35d28] text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg shadow-orange-500/20">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative z-10 reveal">
+                <span class="text-[#f35d28] font-bold tracking-widest uppercase text-sm">Innovating Engagement</span>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-white mt-4 mb-6 leading-tight">
+                    Building the Future of <span class="text-[#f35d28]">Digital Value.</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-10 max-w-lg">
+                    Ignite Labs develops scalable digital platforms designed to facilitate community engagement, rewards distribution, and promotional ecosystems in the Maldives.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#product" class="bg-[#f35d28] text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(243,93,40,0.4)] transition-all">Explore Hadhiya Fihaara</a>
+                </div>
+            </div>
+            <div class="relative reveal delay-200">
+                <div class="absolute -inset-4 brand-gradient opacity-20 blur-3xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000" alt="Tech Infrastructure" class="relative rounded-3xl border border-slate-700 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white text-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl font-bold mb-6">Pioneering Localized Software Solutions</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        Registered in the Maldives, Ignite Labs is focused on building robust application infrastructure that bridges the gap between businesses and their communities. 
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Our mission is to provide structured, transparent mechanisms for reward distribution while maintaining the highest standards of security and operational reliability.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center reveal delay-100">
+                        <div class="text-[#f35d28] font-bold text-4xl mb-2">100%</div>
+                        <div class="text-slate-500 text-sm uppercase tracking-wide">Secure Infrastructure</div>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center reveal delay-200">
+                        <div class="text-[#f35d28] font-bold text-4xl mb-2">MVR</div>
+                        <div class="text-slate-500 text-sm uppercase tracking-wide">Localized Focus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="py-24 bg-[#020617] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-900/50 rounded-[2.5rem] border border-slate-800 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center reveal">
+                <div class="lg:w-1/2 order-2 lg:order-1 reveal delay-100">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000" alt="Hadhiya App" class="rounded-2xl shadow-2xl border border-slate-700">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2 reveal delay-200">
+                    <div class="w-12 h-12 bg-[#f35d28]/10 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="smartphone" class="text-[#f35d28]"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white mb-6 font-display">Hadhiya Fihaara App</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Our flagship digital rewards platform. Hadhiya Fihaara enables users to engage with promotional campaigns and redeem points effortlessly. It provides businesses with a powerful interface to distribute incentives and track engagement in real-time.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3 text-slate-300">
+                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
+                            <span>Real-time digital reward and points redemption</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300">
+                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
+                            <span>Structured merchant promotion and raffle tools</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300">
+                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
+                            <span>Transparent participation and loyalty tracking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="py-24 bg-[#0a0f24] border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold text-white mb-4">Designed for Brand Growth</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">We provide local merchants, retailers, and media partners with a modern ecosystem to boost customer loyalty and campaign participation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-slate-800 z-0"></div>
+
+                <div class="relative z-10 text-center reveal delay-100">
+                    <div class="w-24 h-24 mx-auto bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(243,93,40,0.15)]">
+                        <i data-lucide="megaphone" class="text-[#f35d28] w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Launch Campaigns</h3>
+                    <p class="text-slate-400 text-sm">Merchants and media partners easily set up digital promotions, points systems, or live raffles via our partner portal.</p>
+                </div>
+
+                <div class="relative z-10 text-center reveal delay-200">
+                    <div class="w-24 h-24 mx-auto bg-[#f35d28] border-4 border-[#0a0f24] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-orange-500/20">
+                        <i data-lucide="users" class="text-white w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Engage Users</h3>
+                    <p class="text-slate-400 text-sm">Customers participate seamlessly through the Hadhiya mobile app, driving digital footfall and brand interaction.</p>
+                </div>
+
+                <div class="relative z-10 text-center reveal delay-300">
+                    <div class="w-24 h-24 mx-auto bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(243,93,40,0.15)]">
+                        <i data-lucide="award" class="text-[#f35d28] w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Reward Loyalty</h3>
+                    <p class="text-slate-400 text-sm">Distribute promotional points, exclusive vouchers, and raffle prizes securely to participating users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16 reveal">
+            <h2 class="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">Engineered for high-traffic environments and secure digital interactions.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal">
+                <i data-lucide="gift" class="text-[#f35d28] mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold text-white mb-3">Digital Rewards</h3>
+                <p class="text-slate-400 text-sm">Centralized tools for seamless distribution of incentives and promotional vouchers.</p>
+            </div>
+            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-100">
+                <i data-lucide="bar-chart-3" class="text-[#f35d28] mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold text-white mb-3">Campaign Analytics</h3>
+                <p class="text-slate-400 text-sm">Provide participating merchants with clear insights into promotion performance and reach.</p>
+            </div>
+            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-200">
+                <i data-lucide="layers" class="text-[#f35d28] mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
+                <p class="text-slate-400 text-sm">Cloud-native infrastructure designed to handle growth and rapid spikes in traffic.</p>
+            </div>
+            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-300">
+                <i data-lucide="shield-check" class="text-[#f35d28] mb-6 w-10 h-10"></i>
+                <h3 class="text-xl font-bold text-white mb-3">Secure Systems</h3>
+                <p class="text-slate-400 text-sm">Hardened security protocols protecting both merchant and user data interactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-950 border-t border-slate-900 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-16 reveal">
+            <div>
+                <img src="logo.svg" alt="Ignite Labs" class="h-10 mb-6">
+                <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
+                    Developing digital platforms designed to power modern engagement and reward ecosystems in the Maldives and beyond.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 italic underline decoration-[#f35d28]">Navigation</h4>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li><a href="#about" class="hover:text-white transition">About Ignite Labs</a></li>
+                    <li><a href="#product" class="hover:text-white transition">Hadhiya Fihaara</a></li>
+                    <li><a href="#partners" class="hover:text-white transition">For Partners</a></li>
+                    <li><a href="#capabilities" class="hover:text-white transition">Platform Capabilities</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 italic underline decoration-[#f35d28]">Contact</h4>
+                <p class="text-slate-400 text-sm mb-4">Interested in partnering with us?</p>
+                <a href="mailto:contact@ignitelabs.mv" class="text-white font-medium hover:text-[#f35d28] transition flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    contact@ignitelabs.mv
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 reveal">
+            <p class="text-slate-600 text-xs">© 2026 Ignite Labs LLC. All rights reserved.</p>
+            <div class="flex gap-6 text-slate-600 text-xs">
+                <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Scroll Reveal Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
