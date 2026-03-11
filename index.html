@@ -1,254 +1,522 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignite Labs | Digital Engagement Platforms</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .brand-gradient { background: linear-gradient(135deg, #f35d28 0%, #ff8c66 100%); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
-        
-        /* Scroll Reveal Animation Classes */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignite Labs — Digital Infrastructure for Rewards and Engagement</title>
+  <meta name="description" content="Ignite Labs builds digital platforms that enable organizations to distribute promotional rewards and run engagement programs through the Hadhiya Fihaara mobile platform.">
+  <meta name="theme-color" content="#06070f">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#020617] text-slate-200 overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 glass border-b border-slate-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="logo_hr_light.svg" alt="Ignite Labs" class="h-10">
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-[#f35d28] transition">About Us</a>
-                <a href="#product" class="hover:text-[#f35d28] transition">Hadhiya Fihaara</a>
-                <a href="#partners" class="hover:text-[#f35d28] transition">For Partners</a>
-                <a href="#contact" class="bg-[#f35d28] text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg shadow-orange-500/20">Contact Us</a>
-            </div>
+  <!-- ════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Ignite Labs home">
+        <img src="logo_hr_light.svg" alt="Ignite Labs">
+      </a>
+
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#product">Product</a>
+        <a href="#platform">Platform</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="#product" class="btn btn--nav">Explore Hadhiya</a>
+      </div>
+
+      <button class="nav__mobile-btn" id="mobile-btn" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#product">Product</a>
+      <a href="#platform">Platform</a>
+      <a href="#contact">Contact</a>
+      <a href="#product" class="btn btn--primary" style="margin-top:0.5rem;justify-content:center;">Explore Hadhiya</a>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__bg-r1"></div>
+      <div class="hero__bg-r2"></div>
+      <div class="hero__bg-grid"></div>
+    </div>
+
+    <div class="container hero__container">
+
+      <!-- Left: copy -->
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="badge">
+            <span class="badge__dot"></span>
+            Hadhiya Fihaara Platform
+          </span>
         </div>
-    </nav>
 
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative z-10 reveal">
-                <span class="text-[#f35d28] font-bold tracking-widest uppercase text-sm">Innovating Engagement</span>
-                <h1 class="text-5xl lg:text-7xl font-extrabold text-white mt-4 mb-6 leading-tight">
-                    Building the Future of <span class="text-[#f35d28]">Digital Value.</span>
-                </h1>
-                <p class="text-lg text-slate-400 mb-10 max-w-lg">
-                    Ignite Labs develops scalable digital platforms designed to facilitate community engagement, rewards distribution, and promotional ecosystems in the Maldives.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#product" class="bg-[#f35d28] text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(243,93,40,0.4)] transition-all">Explore Hadhiya Fihaara</a>
-                </div>
-            </div>
-            <div class="relative reveal delay-200">
-                <div class="absolute -inset-4 brand-gradient opacity-20 blur-3xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000" alt="Tech Infrastructure" class="relative rounded-3xl border border-slate-700 shadow-2xl">
-            </div>
+        <h1 class="hero__headline">
+          Digital Infrastructure for
+          <span>Rewards and&nbsp;Engagement</span>
+        </h1>
+
+        <p class="hero__subtext">
+          Ignite Labs builds digital platforms that enable organizations to distribute
+          promotional rewards and run engagement programs through the Hadhiya Fihaara
+          mobile platform.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#product" class="btn btn--primary btn--lg">
+            Explore Hadhiya Fihaara
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </a>
+          <a href="#about" class="btn btn--ghost btn--lg">Learn More</a>
         </div>
-    </section>
 
-    <section id="about" class="py-24 bg-white text-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <h2 class="text-4xl font-bold mb-6">Pioneering Localized Software Solutions</h2>
-                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                        Registered in the Maldives, Ignite Labs is focused on building robust application infrastructure that bridges the gap between businesses and their communities. 
-                    </p>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        Our mission is to provide structured, transparent mechanisms for reward distribution while maintaining the highest standards of security and operational reliability.
-                    </p>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center reveal delay-100">
-                        <div class="text-[#f35d28] font-bold text-4xl mb-2">100%</div>
-                        <div class="text-slate-500 text-sm uppercase tracking-wide">Secure Infrastructure</div>
-                    </div>
-                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 text-center reveal delay-200">
-                        <div class="text-[#f35d28] font-bold text-4xl mb-2">MVR</div>
-                        <div class="text-slate-500 text-sm uppercase tracking-wide">Localized Focus</div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero__trust">
+          <span class="hero__trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Secure infrastructure
+          </span>
+          <span class="hero__trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+            Mobile-first design
+          </span>
+          <span class="hero__trust-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+            Built to scale
+          </span>
         </div>
-    </section>
+      </div>
 
-    <section id="product" class="py-24 bg-[#020617] overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-slate-900/50 rounded-[2.5rem] border border-slate-800 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center reveal">
-                <div class="lg:w-1/2 order-2 lg:order-1 reveal delay-100">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000" alt="Hadhiya App" class="rounded-2xl shadow-2xl border border-slate-700">
-                </div>
-                <div class="lg:w-1/2 order-1 lg:order-2 reveal delay-200">
-                    <div class="w-12 h-12 bg-[#f35d28]/10 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="smartphone" class="text-[#f35d28]"></i>
-                    </div>
-                    <h2 class="text-4xl font-bold text-white mb-6 font-display">Hadhiya Fihaara App</h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                        Our flagship digital rewards platform. Hadhiya Fihaara enables users to engage with promotional campaigns and redeem points effortlessly. It provides businesses with a powerful interface to distribute incentives and track engagement in real-time.
-                    </p>
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-start gap-3 text-slate-300">
-                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
-                            <span>Real-time digital reward and points redemption</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-300">
-                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
-                            <span>Structured merchant promotion and raffle tools</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-slate-300">
-                            <i data-lucide="check-circle-2" class="text-[#f35d28] shrink-0 mt-1"></i>
-                            <span>Transparent participation and loyalty tracking</span>
-                        </li>
-                    </ul>
-                </div>
+      <!-- Right: CSS product mockup -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="mockup">
+          <div class="mockup__glow"></div>
+
+          <!-- Main dashboard card -->
+          <div class="mockup__main">
+            <div class="mockup__header">
+              <div class="mockup__icon">
+                <!-- Gift icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.75"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="8" width="18" height="4" rx="1"/>
+                  <path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
+                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+                </svg>
+              </div>
+              <div>
+                <div class="mockup__name">Hadhiya Fihaara</div>
+                <div class="mockup__sub">Reward Platform</div>
+              </div>
+              <div class="mockup__live">
+                <span class="mockup__live-dot"></span>
+                Live
+              </div>
             </div>
+
+            <div class="mockup__stat">
+              <div class="mockup__stat-num">12,480</div>
+              <div class="mockup__stat-lbl">Rewards Distributed</div>
+            </div>
+
+            <div class="mockup__bar">
+              <div class="mockup__bar-fill"></div>
+            </div>
+
+            <div class="mockup__row">
+              <div class="mockup__cell">
+                <div class="mockup__cell-num">24</div>
+                <div class="mockup__cell-lbl">Campaigns</div>
+              </div>
+              <div class="mockup__cell">
+                <div class="mockup__cell-num">3.2K</div>
+                <div class="mockup__cell-lbl">Participants</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Float card 1: campaign stat -->
+          <div class="mockup__float mockup__float--1">
+            <div class="mockup__float-eyebrow">Active Campaign</div>
+            <div class="mockup__float-val">Ramadan Rewards</div>
+            <div class="mockup__float-sub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                <polyline points="16 7 22 7 22 13"/>
+              </svg>
+              +248 participants today
+            </div>
+          </div>
+
+          <!-- Float card 2: reward notification -->
+          <div class="mockup__float mockup__float--2">
+            <div class="mockup__float-eyebrow">Reward Distributed</div>
+            <div class="mockup__float-val">MVR 500 Voucher</div>
+            <div class="mockup__float-sub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Confirmed · Just now
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="partners" class="py-24 bg-[#0a0f24] border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl font-bold text-white mb-4">Designed for Brand Growth</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">We provide local merchants, retailers, and media partners with a modern ecosystem to boost customer loyalty and campaign participation.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 relative">
-                <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-slate-800 z-0"></div>
+    </div>
+  </section>
 
-                <div class="relative z-10 text-center reveal delay-100">
-                    <div class="w-24 h-24 mx-auto bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(243,93,40,0.15)]">
-                        <i data-lucide="megaphone" class="text-[#f35d28] w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">1. Launch Campaigns</h3>
-                    <p class="text-slate-400 text-sm">Merchants and media partners easily set up digital promotions, points systems, or live raffles via our partner portal.</p>
-                </div>
 
-                <div class="relative z-10 text-center reveal delay-200">
-                    <div class="w-24 h-24 mx-auto bg-[#f35d28] border-4 border-[#0a0f24] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-orange-500/20">
-                        <i data-lucide="users" class="text-white w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">2. Engage Users</h3>
-                    <p class="text-slate-400 text-sm">Customers participate seamlessly through the Hadhiya mobile app, driving digital footfall and brand interaction.</p>
-                </div>
+  <!-- ════════════════════════════════════════════
+       PRODUCT OVERVIEW — Hadhiya Fihaara
+  ════════════════════════════════════════════ -->
+  <section class="section" id="product">
+    <div class="container">
 
-                <div class="relative z-10 text-center reveal delay-300">
-                    <div class="w-24 h-24 mx-auto bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(243,93,40,0.15)]">
-                        <i data-lucide="award" class="text-[#f35d28] w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">3. Reward Loyalty</h3>
-                    <p class="text-slate-400 text-sm">Distribute promotional points, exclusive vouchers, and raffle prizes securely to participating users.</p>
-                </div>
-            </div>
+      <div class="section__header reveal">
+        <span class="badge">Platform</span>
+        <h2>Hadhiya Fihaara</h2>
+        <p>
+          A complete digital platform for businesses and organizations to distribute promotional
+          rewards and run engagement programs for their communities.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card reveal reveal-d1">
+          <div class="card__icon">
+            <!-- Gift -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="8" width="18" height="4" rx="1"/>
+              <path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
+              <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Digital Rewards</h3>
+          <p class="card__desc">
+            Distribute promotional incentives, points, and vouchers digitally to users
+            through a seamless mobile experience.
+          </p>
         </div>
-    </section>
 
-    <section id="capabilities" class="py-24">
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16 reveal">
-            <h2 class="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Engineered for high-traffic environments and secure digital interactions.</p>
+        <div class="card reveal reveal-d2">
+          <div class="card__icon">
+            <!-- Broadcast / send -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m3 11 19-9-9 19-2-8-8-2z"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Campaign Engagement</h3>
+          <p class="card__desc">
+            Run targeted engagement programs, promotional campaigns, and loyalty
+            initiatives for users and partner organizations.
+          </p>
         </div>
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal">
-                <i data-lucide="gift" class="text-[#f35d28] mb-6 w-10 h-10"></i>
-                <h3 class="text-xl font-bold text-white mb-3">Digital Rewards</h3>
-                <p class="text-slate-400 text-sm">Centralized tools for seamless distribution of incentives and promotional vouchers.</p>
-            </div>
-            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-100">
-                <i data-lucide="bar-chart-3" class="text-[#f35d28] mb-6 w-10 h-10"></i>
-                <h3 class="text-xl font-bold text-white mb-3">Campaign Analytics</h3>
-                <p class="text-slate-400 text-sm">Provide participating merchants with clear insights into promotion performance and reach.</p>
-            </div>
-            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-200">
-                <i data-lucide="layers" class="text-[#f35d28] mb-6 w-10 h-10"></i>
-                <h3 class="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
-                <p class="text-slate-400 text-sm">Cloud-native infrastructure designed to handle growth and rapid spikes in traffic.</p>
-            </div>
-            <div class="p-8 rounded-3xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900/60 transition reveal delay-300">
-                <i data-lucide="shield-check" class="text-[#f35d28] mb-6 w-10 h-10"></i>
-                <h3 class="text-xl font-bold text-white mb-3">Secure Systems</h3>
-                <p class="text-slate-400 text-sm">Hardened security protocols protecting both merchant and user data interactions.</p>
-            </div>
+
+        <div class="card reveal reveal-d3">
+          <div class="card__icon">
+            <!-- Users -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="card__title">User Participation</h3>
+          <p class="card__desc">
+            Allow users to interact, participate, and engage with reward campaigns
+            through an intuitive mobile-first interface.
+          </p>
         </div>
-    </section>
 
-    <footer id="contact" class="bg-slate-950 border-t border-slate-900 pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 mb-16 reveal">
-            <div>
-                <img src="logo_hr_light.svg" alt="Ignite Labs" class="h-10 mb-6">
-                <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
-                    Developing digital platforms designed to power modern engagement and reward ecosystems in the Maldives and beyond.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-6 italic underline decoration-[#f35d28]">Navigation</h4>
-                <ul class="space-y-4 text-sm text-slate-400">
-                    <li><a href="#about" class="hover:text-white transition">About Ignite Labs</a></li>
-                    <li><a href="#product" class="hover:text-white transition">Hadhiya Fihaara</a></li>
-                    <li><a href="#partners" class="hover:text-white transition">For Partners</a></li>
-                    <li><a href="#capabilities" class="hover:text-white transition">Platform Capabilities</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-6 italic underline decoration-[#f35d28]">Contact</h4>
-                <p class="text-slate-400 text-sm mb-4">Interested in partnering with us?</p>
-                <a href="mailto:contact@ignitelabs.mv" class="text-white font-medium hover:text-[#f35d28] transition flex items-center gap-2">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                    contact@ignitelabs.mv
-                </a>
-            </div>
+        <div class="card reveal reveal-d4">
+          <div class="card__icon">
+            <!-- Layers -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Platform Infrastructure</h3>
+          <p class="card__desc">
+            Scalable, reliable architecture built for modern digital services with
+            high availability and performance at scale.
+          </p>
         </div>
-        <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 reveal">
-            <p class="text-slate-600 text-xs">© 2026 Ignite Labs LLC. All rights reserved.</p>
-            <div class="flex gap-6 text-slate-600 text-xs">
-                <a href="privacy.html" class="hover:text-slate-400 transition">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-slate-400 transition">Terms of Service</a>
-            </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       PLATFORM CAPABILITIES
+  ════════════════════════════════════════════ -->
+  <section class="section section--alt" id="platform">
+    <div class="container">
+
+      <div class="section__header reveal">
+        <span class="badge">Infrastructure</span>
+        <h2>Platform Capabilities</h2>
+        <p>Engineered for performance, reliability, and modern digital service delivery.</p>
+      </div>
+
+      <div class="capabilities-grid">
+
+        <div class="capability reveal reveal-d1">
+          <div class="capability__icon">
+            <!-- Shield check -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div class="capability__body">
+            <h3>Secure Digital Infrastructure</h3>
+            <p>Hardened systems with robust security protocols protecting every interaction on the platform.</p>
+          </div>
         </div>
-    </footer>
 
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
+        <div class="capability reveal reveal-d2">
+          <div class="capability__icon">
+            <!-- Trending up -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <div class="capability__body">
+            <h3>Scalable Platform Design</h3>
+            <p>Cloud-native architecture designed to handle growth and rapid spikes in user demand seamlessly.</p>
+          </div>
+        </div>
 
-        // Scroll Reveal Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15 
-            };
+        <div class="capability reveal reveal-d3">
+          <div class="capability__icon">
+            <!-- Smartphone -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <div class="capability__body">
+            <h3>Modern Mobile-First Architecture</h3>
+            <p>Optimized for mobile experiences with fast, responsive interfaces built for real-world use.</p>
+          </div>
+        </div>
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target); 
-                    }
-                });
-            }, observerOptions);
+        <div class="capability reveal reveal-d4">
+          <div class="capability__icon">
+            <!-- Check circle -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.75"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div class="capability__body">
+            <h3>Reliable System Operations</h3>
+            <p>Dependable infrastructure with continuous monitoring and high availability for uninterrupted service.</p>
+          </div>
+        </div>
 
-            document.querySelectorAll('.reveal').forEach((element) => {
-                observer.observe(element);
-            });
-        });
-    </script>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       ABOUT IGNITE LABS
+  ════════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about__layout">
+
+        <div class="about__content reveal">
+          <div class="about__badge">
+            <span class="badge">Ignite Labs</span>
+          </div>
+          <h2 class="about__headline">
+            Built in the Maldives,<br>for the Digital Future
+          </h2>
+          <p class="about__body">
+            Ignite Labs is a Maldives-based technology company building digital engagement
+            platforms for businesses and organizations. We focus on creating structured,
+            transparent mechanisms for reward distribution and community engagement.
+          </p>
+          <p class="about__body">
+            Our mission is to provide modern digital infrastructure that bridges the gap
+            between organizations and their communities — enabling meaningful engagement
+            through the Hadhiya Fihaara platform.
+          </p>
+        </div>
+
+        <div class="about__stats reveal reveal-d2">
+          <div class="stat-card">
+            <div class="stat-card__val">100%</div>
+            <div class="stat-card__lbl">Secure Infrastructure</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__val">MVR</div>
+            <div class="stat-card__lbl">Localized Currency</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__val">Mobile</div>
+            <div class="stat-card__lbl">First Platform</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__val">MV</div>
+            <div class="stat-card__lbl">Maldives Based</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       CALL TO ACTION
+  ════════════════════════════════════════════ -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta__inner reveal">
+        <span class="badge">Get Started</span>
+        <h2>Power your engagement programs with Hadhiya&nbsp;Fihaara.</h2>
+        <p>
+          Reach out to learn how Ignite Labs can help your organization build modern
+          digital rewards and engagement infrastructure.
+        </p>
+        <a href="mailto:contact@ignitelabs.mv" class="btn btn--primary btn--lg">
+          Contact Ignite Labs
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <img src="logo_hr_light.svg" alt="Ignite Labs">
+          <p>
+            Developing digital platforms designed to power modern engagement
+            and reward ecosystems in the Maldives and beyond.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__col-title">Navigation</div>
+          <ul class="footer__links">
+            <li><a href="#about">About Ignite Labs</a></li>
+            <li><a href="#product">Hadhiya Fihaara</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__contact">
+          <div class="footer__col-title">Contact</div>
+          <p>Interested in partnering with us?</p>
+          <a href="mailto:contact@ignitelabs.mv" class="footer__email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            contact@ignitelabs.mv
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Ignite Labs LLC. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
